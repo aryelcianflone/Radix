@@ -61,6 +61,41 @@ angular.module('Downroot').service('placesService', function($q) {
 
   }
 
+  this.getPlaceDetails = function(placeId) {
+    var request = {
+      placeId: placeId
+    };
+
+    var service = new google.maps.places.PlacesService(map);
+
+    return $q(function (resolve, reject) {
+      service.getDetails(request, function (place, status) {
+        if (status == google.maps.places.PlacesServiceStatus.OK) {
+          resolve(place);
+        }
+      });
+    }) 
+
+  }
+  //   var service = new google.maps.places.PlacesService(map);
+
+  //   return $q(function (resolve, reject) {
+  //     service.getDetails(request, function (place, status) {
+  //       if (status == google.maps.places.PlacesServiceStatus.OK) {
+  //       resolve();
+  //     });
+  //   }) 
+  //   service = new google.maps.places.PlacesService(map);
+  //   service.getDetails(request, callback);
+
+  //   function callback(place, status) {
+  //     if (status == google.maps.places.PlacesServiceStatus.OK) {
+  //     createMarker(place);
+
+  //     }
+  //   }
+  // }
+
 });
 
 
