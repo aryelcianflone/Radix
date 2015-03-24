@@ -1,29 +1,40 @@
-angular.module('Downroot', []);
+angular.module('Downroot', ['ngRoute']).config(function($routeProvider){
+	
+  // $httpProvider.interceptors.push('httpRequestInterceptor');
 
-//   var geocoder;
-//   var map;
-//   function initialize() {
-//     geocoder = new google.maps.Geocoder();
-//     var latlng = new google.maps.LatLng(-34.397, 150.644);
-//     var mapOptions = {
-//       zoom: 8,
-//       center: latlng
-//     }
-//     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
-//   }
+  //router here
 
-//   function codeAddress() {
-//     var address = document.getElementById("address").value;
-//     geocoder.geocode( { 'address': address}, function(results, status) {
-//       if (status == google.maps.GeocoderStatus.OK) {
-//         map.setCenter(results[0].geometry.location);
-//         console.log(results[0].geometry);
-//         var marker = new google.maps.Marker({
-//             map: map,
-//             position: results[0].geometry.location
-//         });
-//       } else {
-//         alert("Geocode was not successful for the following reason: " + status);
-//       }
-//     });
-//   }
+  $routeProvider
+    .when('/', {
+      templateUrl: '/routes/home/homeTmpl.html',
+      controller: 'homeCtrl'
+    })
+    .when('/results', {
+      templateUrl: '/routes/results/resultsTmpl.html',
+      controller: 'resultsCtrl'
+      // resolve: {
+      //   teamData: function (resultsService, $route) {
+      //     return resultsService.getCategories($route.current.params.team)
+      // 	}
+      // }
+    })
+
+    .when('/results/:category', {
+      templateUrl: '/routes/categories/categoryTmpl.html',
+      controller: 'categoryCtrl',
+      // resolve: {
+      //   teamData: function (categoryService, $route) {
+      //     return categoryService.getTeamData($route.current.params.category)
+      //   }
+      // }
+    })
+
+    .otherwise({
+      redirectTo: '/'
+    });
+
+});
+
+angular.module('Downroot').run(function($rootScope){
+    $rootScope.user = {};
+});

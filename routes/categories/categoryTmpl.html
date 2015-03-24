@@ -1,0 +1,15 @@
+<button>        
+	<a href="/#/results">Results</a>
+</button>
+
+<div ng-repeat="place in placesData" ng-click="getPlaceDetails(place)">
+  {{place.name}}
+  {{place.vicinity}}
+  <br>
+  <div>
+    {{place.details.formatted_address}}
+    {{place.Details.formatted_phone_number}}
+    {{place.Details.ratings}}
+  </div>
+  <br>
+</div>
