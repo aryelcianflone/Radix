@@ -1,4 +1,4 @@
-angular.module('Downroot', ['ngRoute']).config(function($routeProvider){
+angular.module('Downroot', ['ngRoute', 'LocalStorageModule']).config(function($routeProvider, localStorageServiceProvider){
 	
   // $httpProvider.interceptors.push('httpRequestInterceptor');
 
@@ -11,7 +11,7 @@ angular.module('Downroot', ['ngRoute']).config(function($routeProvider){
     })
     .when('/results', {
       templateUrl: '/routes/results/resultsTmpl.html',
-      controller: 'resultsCtrl'
+      controller: 'categoryCtrl'
       // resolve: {
       //   teamData: function (resultsService, $route) {
       //     return resultsService.getCategories($route.current.params.team)
@@ -33,8 +33,13 @@ angular.module('Downroot', ['ngRoute']).config(function($routeProvider){
       redirectTo: '/'
     });
 
+  localStorageServiceProvider.setPrefix('Downroot');
+
 });
 
-angular.module('Downroot').run(function($rootScope){
+angular.module('Downroot').run(function($rootScope, localStorageService){
     $rootScope.user = {};
+   // localStorageService.get('localUserAddress');
+    window.localStorageService = localStorageService;
+    $rootScope.user.userAddress = localStorageService.get('localUserAddress');
 });

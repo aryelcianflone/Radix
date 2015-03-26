@@ -1,4 +1,6 @@
-angular.module('Downroot').controller('categoryCtrl', function($rootScope, $scope, $routeParams, homeService, categoryService){
+angular.module('Downroot').controller('categoryCtrl', function($rootScope, $scope, $routeParams, categoryService, localStorageService){
+	
+	// window.$scope = $scope;
 
 	$scope.codeAddress = function() {
 		return placesService.codeAddress($rootScope.user.userAddress);
