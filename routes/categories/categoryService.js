@@ -32,7 +32,7 @@ angular.module('Downroot').service('categoryService', function($q){
     });
   }
 
-  this.getPlaces = function initialize(lat, long, category) {
+  this.getPlaces = function initialize(lat, long, category, keyword) {
 
     console.log(lat, long);
     console.log("get places test");
@@ -41,8 +41,10 @@ angular.module('Downroot').service('categoryService', function($q){
 
     var request = {
       location: userLocation,
-      radius: '2000',
-      types: category
+      // radius: '2000',
+      types: category,
+      keyword: keyword,
+      rankBy: google.maps.places.RankBy.DISTANCE
     };
 
     map = new google.maps.Map(document.getElementById('map'), {
@@ -74,6 +76,7 @@ angular.module('Downroot').service('categoryService', function($q){
       service.getDetails(request, function (place, status) {
         if (status == google.maps.places.PlacesServiceStatus.OK) {
           resolve(place);
+        } else {
         }
       });
     }) 

@@ -11,7 +11,7 @@ angular.module('Downroot', ['ngRoute', 'LocalStorageModule']).config(function($r
     })
     .when('/results', {
       templateUrl: '/routes/results/resultsTmpl.html',
-      controller: 'categoryCtrl'
+      controller: 'resultsCtrl'
       // resolve: {
       //   teamData: function (resultsService, $route) {
       //     return resultsService.getCategories($route.current.params.team)
