@@ -1,4 +1,4 @@
-angular.module('Downroot', ['ngRoute', 'LocalStorageModule']).config(function($routeProvider, localStorageServiceProvider){
+angular.module('Downroot', ['ngRoute', 'LocalStorageModule', 'ngMaterial']).config(function($routeProvider, localStorageServiceProvider, $mdThemingProvider){
 	
   // $httpProvider.interceptors.push('httpRequestInterceptor');
 
@@ -34,6 +34,10 @@ angular.module('Downroot', ['ngRoute', 'LocalStorageModule']).config(function($r
     });
 
   localStorageServiceProvider.setPrefix('Downroot');
+
+  $mdThemingProvider.theme('docs-dark', 'default')
+    .primaryPalette('yellow')
+    .dark();
 
 });
 

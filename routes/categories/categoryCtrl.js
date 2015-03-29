@@ -3,13 +3,15 @@ angular.module('Downroot').controller('categoryCtrl', function($rootScope, $scop
 	// window.$scope = $scope;
 
 	if ($routeParams.category === 'coffee') {
-		$scope.categorySelect = ['cafe', 'food', 'store', 'establishment'];
+		$scope.categorySelect = ['bakery', 'cafe', 'food', 'establishment'];
 		$scope.keyword = 'coffee'
 	} else if ($routeParams.category === 'grocery') {
 		$scope.categorySelect = ['grocery_or_supermarket'];
 	} else if ($routeParams.category === 'pizza') {
 		$scope.categorySelect = ['restaurant'];
 		$scope.keyword = 'pizza'
+	} else if ($routeParams.category === 'movietheater') {
+		$scope.categorySelect = ['movie_theater'];
 	} else if ($routeParams.category === 'atm') {
 		$scope.categorySelect = ['atm'];
 	} else if ($routeParams.category === 'gas') {
@@ -39,9 +41,9 @@ angular.module('Downroot').controller('categoryCtrl', function($rootScope, $scop
 	} 
 
 	var getPlaces = function() {
-		console.log($rootScope.user.userAddress);
+		console.log($rootScope.user.address, $rootScope.user.city, $rootScope.user.state);
 		console.log("$rootScope");
-		return categoryService.codeAddress($rootScope.user.userAddress).then(function(latLong) {
+		return categoryService.codeAddress($rootScope.user.address, $rootScope.user.city, $rootScope.user.state).then(function(latLong) {
 			console.log(latLong);
 			categoryService.getPlaces(latLong[0], latLong[1], $scope.categorySelect, $scope.keyword).then(function(res) {
 					$scope.placesData = res;

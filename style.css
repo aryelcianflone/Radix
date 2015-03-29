@@ -1,0 +1,198 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	background-color: rgba(214, 253, 66, 0.44);
+}
+
+/*.topBar {
+	height: 300vh;
+}*/
+.bold {
+	font-weight: 600;
+}
+
+.nav {
+	width: 100%;
+	height: 100px;
+	position: fixed;
+	color: #006837;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-color: #006837; 
+	z-index: 1;
+}
+
+.nav a:hover {
+	color: #cc6666;
+}
+
+.navInfo {
+	margin: 33px 53px 34px;
+	float: right;
+	font-size: 45px;
+}
+
+.navLogo {
+	float: left;
+	width: 300px;
+	margin-left: 2em;
+}
+
+.homeContent {
+	position: relative;
+  top: 50%;
+  transform: translateY(60%);
+
+/*  padding-left: 1.5rem;*/
+/*	margin-left: 45vh;
+	margin-right: 45vh;*/
+/*	border-style: solid;
+	border-width: 5px;
+	border-color: blue;*/
+/*	display: block;
+  margin-left: auto;
+  margin-right: auto*/
+} 
+
+.homeTree {
+	width: 130px;
+	padding-bottom: 1.5rem;
+}
+
+.homeText {
+	font-size: 95px;
+	color: #006837;
+	margin: 0;
+	text-align:left;
+	width:1110px;
+	letter-spacing: 1.5px;
+}
+
+.buttonLeft{
+	margin-top: 30px;
+	margin-left: 5.5px;
+	width:1110px;
+	text-align:left;
+
+}
+
+.button {
+	font-size: 48px;
+	letter-spacing: 1px;
+	color: #006837;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #006837;
+	width: 435px;
+	height: 98.89px;
+	font-family: 'Raleway', sans-serif;
+	text-align:center;
+	background-color: transparent;
+}
+
+@media screen and (max-width: 825px) {
+	.navInfo {
+		margin: 34px 15px 34px;
+		float: right;
+		font-size: 35px;
+		font-weight: bold;
+	}
+
+	.navLogo {
+		float: left;
+		width: 215px;
+		margin-left: 0;
+		padding-top: 20px;
+	}
+
+	.homeContent {
+		position: relative;
+  	top: 50%;
+  	transform: translateY(100%);
+ 	}
+
+	.homeText {
+		font-size: 28px;
+		color: #006837;
+		margin: 0;
+		text-align:left;
+		width:350px;
+		letter-spacing: 1.5px;
+	}
+
+	.buttonLeft{
+		margin-top: 30px;
+		margin-left: 5.5px;
+		width:350px;
+		text-align:left;
+
+	}
+
+	.button {
+		font-size: 14px;
+		letter-spacing: 1px;
+		color: #006837;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #006837;
+		width: 145px;
+		height: 42px;
+		font-family: 'Raleway', sans-serif;
+		text-align:center;
+		background-color: transparent;
+	}
+}
+
+@media screen and (min-width: 825px) and (max-width: 1200px) {
+	.navInfo {
+		margin: 33px 53px 34px;
+		float: right;
+		font-size: 45px;
+	}
+
+	.navLogo {
+		float: left;
+		width: 300px;
+		margin-left: 2em;
+	}
+
+	.homeContent {
+		position: relative;
+	  top: 50%;
+	  transform: translateY(70%);
+	} 
+
+	.homeText {
+		font-size: 70px;
+		color: #006837;
+		margin: 0;
+		text-align:left;
+		width:815px;
+		letter-spacing: 1.5px;
+	}
+
+	.buttonLeft{
+		margin-top: 30px;
+		margin-left: 5.5px;
+		width:815px;
+		text-align:left;
+
+	}
+
+	.button {
+		font-size: 48px;
+		letter-spacing: 1px;
+		color: #006837;
+		border-style: solid;
+		border-width: 2px;
+		border-color: #006837;
+		width: 435px;
+		height: 98.89px;
+		font-family: 'Raleway', sans-serif;
+		text-align:center;
+		background-color: transparent;
+	}
+
+}
