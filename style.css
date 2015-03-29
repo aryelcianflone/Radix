@@ -3,7 +3,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
-	background-color: rgba(214, 253, 66, 0.44);
+	background-color: #E1FC7C;
 }
 
 /*.topBar {
@@ -22,6 +22,7 @@ html, body {
 	border-bottom-width: 1px;
 	border-color: #006837; 
 	z-index: 1;
+	background-color: #E1FC7C;
 }
 
 .nav a:hover {
@@ -44,6 +45,7 @@ html, body {
 	position: relative;
   top: 50%;
   transform: translateY(60%);
+  height: 450px;
 
 /*  padding-left: 1.5rem;*/
 /*	margin-left: 45vh;
@@ -68,6 +70,7 @@ html, body {
 	text-align:left;
 	width:1110px;
 	letter-spacing: 1.5px;
+/*	transition: font-size .3s;*/
 }
 
 .buttonLeft{
@@ -89,7 +92,13 @@ html, body {
 	height: 98.89px;
 	font-family: 'Raleway', sans-serif;
 	text-align:center;
-	background-color: transparent;
+	background-color: #E1FC7C;
+}
+
+.form {
+	width:1110px;
+	margin-left: 5.5px;
+	margin-top: 10px;
 }
 
 @media screen and (max-width: 825px) {
@@ -110,7 +119,7 @@ html, body {
 	.homeContent {
 		position: relative;
   	top: 50%;
-  	transform: translateY(100%);
+  	transform: translateY(70%);
  	}
 
 	.homeText {
@@ -142,6 +151,11 @@ html, body {
 		font-family: 'Raleway', sans-serif;
 		text-align:center;
 		background-color: transparent;
+	}
+	.form {
+		width:350px;
+		margin-left: 5.5px;
+		margin-top: 10px
 	}
 }
 
@@ -193,6 +207,11 @@ html, body {
 		font-family: 'Raleway', sans-serif;
 		text-align:center;
 		background-color: transparent;
+	}
+	.form {
+		width:815px;
+		margin-left: 5.5px;
+		margin-top: 10px
 	}
 
 }
