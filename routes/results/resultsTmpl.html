@@ -2,128 +2,128 @@
     <a href="/#/"> Enter New Address </a>
   </div>
   <center>
+    <div ng-show="showme" ng-repeat="place in placesData">
+      {{place.name}}
+      <br>
+      <div>
+        {{place.details.formatted_address}}
+        {{place.details.formatted_phone_number}}
+        {{place.details.rating}}
+      </div>
+      <div>
+        {{place.details.types}}
+      </div>
+      <div>{{place.details.url}}</div>
+        <br>
+    </div>
 
       <ul class="results"> 
-        <a href="/#/results/coffee">
-          <li class="resultButton orange">
+          
+          <li class="resultButton orange" ng-click="getPlaces('coffee'); showme=true">
             <img class="resultButtonIcon" src="icons/coffee.svg"/>
             <div class="resultButtonText bold">
               COFFEE 
             </div>  
           </li>
-        </a>
-        <a href="/#/results/grocery"> 
-          <li class="resultButton green">
+
+          <li class="resultButton green" ng-click="getPlaces('grocery'); showme=true">
             <img class="resultButtonIcon" src="icons/grocery.svg"/>
             <div class="resultButtonText bold">
-              GROCERY
+              GROCERY 
             </div>  
           </li>
-        </a>
-        <a href="/#/results/pizza"> 
-          <li class="resultButton pink">
+  
+          <li class="resultButton pink" ng-click="getPlaces('pizza'); showme=true">
             <img class="resultButtonIcon" id="pizza" src="icons/pizza.svg"/>
             <div class="resultButtonText bold">
-              PIZZA 
+              PIZZA
             </div>  
           </li>
-        </a>
-        <a href="/#/results/movietheater"> 
-          <li class="resultButton blue">
+
+          <li class="resultButton blue" ng-click="getPlaces('movietheater'); showme=true">
             <img class="resultButtonIcon" id="pizza" src="icons/movietheater.svg"/>
             <div class="resultButtonText bold">
               MOVIE THEATER
             </div>  
           </li>
-        </a>
-        <a href="/#/results/atm"> 
-          <li class="resultButton purple">
+
+          <li class="resultButton purple" ng-click="getPlaces('atm'); showme=true">
             <img class="resultButtonIcon" src="icons/atm.svg"/>
             <div class="resultButtonText bold">
-              ATM 
+              ATM
             </div>  
           </li>
-        </a>
-        <a href="/#/results/gas"> 
-          <li class="resultButton orange">
+
+          <li class="resultButton orange" ng-click="getPlaces('gas'); showme=true">
             <img class="resultButtonIcon" id="gas" src="icons/gas.svg"/>
             <div class="resultButtonText bold">
               GAS
             </div>  
           </li>
-        </a>
-        <a href="/#/results/postoffice"> 
-          <li class="resultButton green">
+
+          <li class="resultButton green" ng-click="getPlaces('postoffice'); showme=true">
             <img class="resultButtonIcon" id="hanger" src="icons/postoffice.svg"/>
             <div class="resultButtonText bold">
               POST OFFICE
             </div>  
           </li>
-        </a>
-        <a href="/#/results/drycleaning"> 
-          <li class="resultButton pink">
+
+          <li class="resultButton pink" ng-click="getPlaces('drycleaning'); showme=true">
             <img class="resultButtonIcon" id="hanger" src="icons/drycleaning.svg"/>
             <div class="resultButtonText bold">
               DRY CLEANING
             </div>  
           </li>
-        </a>
-        <a href="/#/results/pharmacy"> 
-          <li class="resultButton blue">
+
+          <li class="resultButton blue" ng-click="getPlaces('pharmacy'); showme=true">
             <img class="resultButtonIcon" src="icons/pharmacy.svg"/>
             <div class="resultButtonText bold">
-              PHARMACY 
+              PHARMACY
             </div>  
           </li>
-        </a>
-        <a href="/#/results/carwash"> 
-          <li class="resultButton purple">
+
+          <li class="resultButton purple" ng-click="getPlaces('carwash'); showme=true">
             <img class="resultButtonIcon" id="gas" src="icons/carwash.svg"/>
             <div class="resultButtonText bold">
               CAR WASH
-            </div>  
+            </div> 
           </li>
-        </a>
-        <a href="/#/results/carrepair"> 
-          <li class="resultButton orange">
+
+          <li class="resultButton orange" ng-click="getPlaces('carrepair'); showme=true">
             <img class="resultButtonIcon" src="icons/carrepair.svg"/>
             <div class="resultButtonText bold">
-              CAR REPAIR 
+              CAR REPAIR
             </div>  
           </li>
-        </a>
-        <a href="/#/results/dentist"> 
-          <li class="resultButton green">
-            <img class="resultButtonIcon" src="icons/dentist.svg"/>
+
+          <li class="resultButton green" ng-click="getPlaces('dentist'); showme=true">
+            <img class="resultButtonIcon" src="icons/pizza.svg"/>
             <div class="resultButtonText bold">
               DENTIST
             </div>  
           </li>
-        </a>
-        <a href="/#/results/doctor"> 
-          <li class="resultButton orange">
+
+          <li class="resultButton pink" ng-click="getPlaces('doctor'); showme=true">
             <img class="resultButtonIcon" src="icons/doctor.svg"/>
             <div class="resultButtonText bold">
               DOCTOR
             </div>  
           </li>
-        </a>
-        <a href="/#/results/hospital"> 
-          <li class="resultButton blue">
+
+          <li class="resultButton blue" ng-click="getPlaces('hospital'); showme=true">
             <img class="resultButtonIcon" src="icons/hospital.svg"/>
             <div class="resultButtonText bold">
               HOSPITAL
             </div>  
           </li>
-        </a>
-        <a href="/#/results/policestation"> 
-          <li class="resultButton purple">
+
+          <li class="resultButton purple" ng-click="getPlaces('police'); showme=true">
             <img class="resultButtonIcon" src="icons/police.svg"/>
             <div class="resultButtonText bold">
               POLICE
             </div>  
           </li>
-        </a>
+
       </ul>
     
   </center>

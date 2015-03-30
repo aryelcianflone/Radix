@@ -9,6 +9,7 @@ angular.module('Downroot', ['ngRoute', 'LocalStorageModule', 'ngMaterial']).conf
       templateUrl: '/routes/home/homeTmpl.html',
       controller: 'homeCtrl'
     })
+    
     .when('/results', {
       templateUrl: '/routes/results/resultsTmpl.html',
       controller: 'resultsCtrl'

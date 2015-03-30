@@ -43,6 +43,7 @@ angular.module('Downroot').controller('categoryCtrl', function($rootScope, $scop
 	var getPlaces = function() {
 		console.log($rootScope.user.address, $rootScope.user.city, $rootScope.user.state);
 		console.log("$rootScope");
+		var userAddress = 
 		return categoryService.codeAddress($rootScope.user.address, $rootScope.user.city, $rootScope.user.state).then(function(latLong) {
 			console.log(latLong);
 			categoryService.getPlaces(latLong[0], latLong[1], $scope.categorySelect, $scope.keyword).then(function(res) {
