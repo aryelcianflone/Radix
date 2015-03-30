@@ -9,7 +9,7 @@ angular.module('Downroot', ['ngRoute', 'LocalStorageModule', 'ngMaterial']).conf
       templateUrl: '/routes/home/homeTmpl.html',
       controller: 'homeCtrl'
     })
-    
+
     .when('/results', {
       templateUrl: '/routes/results/resultsTmpl.html',
       controller: 'resultsCtrl'
@@ -46,5 +46,7 @@ angular.module('Downroot').run(function($rootScope, localStorageService){
     $rootScope.user = {};
    // localStorageService.get('localUserAddress');
     window.localStorageService = localStorageService;
-    $rootScope.user.userAddress = localStorageService.get('localUserAddress');
+    $rootScope.user.address = localStorageService.get('localUserStreetAddress');
+    $rootScope.user.city = localStorageService.get('localUserCity');
+    $rootScope.user.state = localStorageService.get('localUserState');
 });

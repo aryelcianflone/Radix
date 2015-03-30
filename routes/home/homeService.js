@@ -1,3 +1,3 @@
-angular.module('Downroot').service('homeService', function($q, resultsService, categoryService){
+angular.module('Downroot').service('homeService', function($q, resultsService){
 	
 });
