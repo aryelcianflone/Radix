@@ -59,6 +59,8 @@ angular.module('Downroot').controller('resultsCtrl', function($rootScope, $scope
 		console.log($rootScope.user.address, $rootScope.user.city, $rootScope.user.state);
 		console.log("$rootScope");
 		$scope.showingCategory = true;
+		$scope.categoryChoice = category;
+
 		return resultsService.codeAddress(localStorageService.get('localUserAddress')).then(function(latLong) {
 			console.log(localStorageService.get('localUserAddress'));
 			console.log(latLong);

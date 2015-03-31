@@ -20,14 +20,8 @@ angular.module('Downroot', ['ngRoute', 'LocalStorageModule', 'ngMaterial']).conf
       // }
     })
 
-    .when('/results/:category', {
-      templateUrl: '/routes/categories/categoryTmpl.html',
-      controller: 'categoryCtrl',
-      // resolve: {
-      //   teamData: function (categoryService, $route) {
-      //     return categoryService.getTeamData($route.current.params.category)
-      //   }
-      // }
+    .when('/info', {
+      templateUrl: '/info.html'
     })
 
     .otherwise({

@@ -2,108 +2,108 @@
   <center>
     <table ng-class="{'hideMenu' : showingCategory}" class="table">
       <tr>
-        <td class="resultsHolder">
+        <td class="resultsHolder" ng-class="{'rightLine' : showingCategory}">
           <ul class="results"> 
           
-            <li class="resultButton orange" ng-click="getPlaces('coffee'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='coffee'}" class="resultButton orange" ng-click="getPlaces('coffee'); showme=true">
               <img class="resultButtonIcon" src="icons/coffee.svg"/>
               <div class="resultButtonText bold">
                 COFFEE 
               </div>  
             </li>
 
-            <li class="resultButton green" ng-click="getPlaces('grocery'); showme=true">
-              <img class="resultButtonIcon" src="icons/grocery.svg"/>
+            <li ng-class="{'noBorder' : categoryChoice==='grocery'}" class="resultButton green" ng-click="getPlaces('grocery'); showme=true">
+              <img class="resultButtonIcon" src="icons/grocery.svg"/> 
               <div class="resultButtonText bold">
                 GROCERY 
               </div>  
             </li>
     
-            <li class="resultButton pink" ng-click="getPlaces('pizza'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='pizza'}" class="resultButton pink" ng-click="getPlaces('pizza'); showme=true">
               <img class="resultButtonIcon" id="pizza" src="icons/pizza.svg"/>
               <div class="resultButtonText bold">
                 PIZZA
               </div>  
             </li>
 
-            <li class="resultButton blue" ng-click="getPlaces('movietheater'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='movietheater'}" class="resultButton blue long" ng-click="getPlaces('movietheater'); showme=true">
               <img class="resultButtonIcon" id="pizza" src="icons/movietheater.svg"/>
               <div class="resultButtonText bold">
                 MOVIE THEATER
               </div>  
             </li>
 
-            <li class="resultButton purple" ng-click="getPlaces('atm'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='atm'}" class="resultButton purple" ng-click="getPlaces('atm'); showme=true">
               <img class="resultButtonIcon" src="icons/atm.svg"/>
               <div class="resultButtonText bold">
                 ATM
               </div>  
             </li>
 
-            <li class="resultButton orange" ng-click="getPlaces('gas'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='gas'}" class="resultButton orange" ng-click="getPlaces('gas'); showme=true">
               <img class="resultButtonIcon" id="gas" src="icons/gas.svg"/>
               <div class="resultButtonText bold">
                 GAS
               </div>  
             </li>
 
-            <li class="resultButton green" ng-click="getPlaces('postoffice'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='postoffice'}" class="resultButton green" ng-click="getPlaces('postoffice'); showme=true">
               <img class="resultButtonIcon" id="hanger" src="icons/postoffice.svg"/>
               <div class="resultButtonText bold">
                 POST OFFICE
               </div>  
             </li>
 
-            <li class="resultButton pink" ng-click="getPlaces('drycleaning'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='drycleaning'}" class="long resultButton pink" ng-click="getPlaces('drycleaning'); showme=true">
               <img class="resultButtonIcon" id="hanger" src="icons/drycleaning.svg"/>
               <div class="resultButtonText bold">
                 DRY CLEANING
               </div>  
             </li>
 
-            <li class="resultButton blue" ng-click="getPlaces('pharmacy'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='pharmacy'}" class="resultButton blue" ng-click="getPlaces('pharmacy'); showme=true">
               <img class="resultButtonIcon" src="icons/pharmacy.svg"/>
               <div class="resultButtonText bold">
                 PHARMACY
               </div>  
             </li>
 
-            <li class="resultButton purple" ng-click="getPlaces('carwash'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='carwash'}" class="resultButton purple" ng-click="getPlaces('carwash'); showme=true">
               <img class="resultButtonIcon" id="gas" src="icons/carwash.svg"/>
               <div class="resultButtonText bold">
                 CAR WASH
               </div> 
             </li>
 
-            <li class="resultButton orange" ng-click="getPlaces('carrepair'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='carrepair'}" class="resultButton orange" ng-click="getPlaces('carrepair'); showme=true">
               <img class="resultButtonIcon" src="icons/carrepair.svg"/>
               <div class="resultButtonText bold">
                 CAR REPAIR
               </div>  
             </li>
 
-            <li class="resultButton green" ng-click="getPlaces('dentist'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='dentist'}" class="resultButton green" ng-click="getPlaces('dentist'); showme=true">
               <img class="resultButtonIcon" src="icons/pizza.svg"/>
               <div class="resultButtonText bold">
                 DENTIST
               </div>  
             </li>
 
-            <li class="resultButton pink" ng-click="getPlaces('doctor'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='doctor'}" class="resultButton pink" ng-click="getPlaces('doctor'); showme=true">
               <img class="resultButtonIcon" src="icons/doctor.svg"/>
               <div class="resultButtonText bold">
                 DOCTOR
               </div>  
             </li>
 
-            <li class="resultButton blue" ng-click="getPlaces('hospital'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='hospital'}" class="resultButton blue" ng-click="getPlaces('hospital'); showme=true">
               <img class="resultButtonIcon" src="icons/hospital.svg"/>
               <div class="resultButtonText bold">
                 HOSPITAL
               </div>  
             </li>
 
-            <li class="resultButton purple" ng-click="getPlaces('police'); showme=true">
+            <li ng-class="{'noBorder' : categoryChoice==='police'}" class="resultButton purple" ng-click="getPlaces('police'); showme=true">
               <img class="resultButtonIcon" src="icons/police.svg"/>
               <div class="resultButtonText bold">
                 POLICE
@@ -112,7 +112,8 @@
           </ul>
         </td>
 
-        <td ng-class="[color]" ng-show="showme" class="categoryResults outcomes">
+        <td ng-class="[color]" ng-show="showme" class="leftLine categoryResults outcomes">
+          <center>
           <div class="categoryResults outcome" ng-repeat="place in placesData">
             <span class="resultName bold">{{place.name}}</span>
             <br>
@@ -180,6 +181,8 @@
               {{place.details.formatted_phone_number}}
             </span>
           </div>
+        </div>
+      </center>
         </td>
 
       </tr>
