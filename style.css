@@ -35,9 +35,9 @@ a {
 }
 
 .navInfo {
-	margin: 33px 53px 34px;
+	margin: 29px 53px 34px;
 	float: right;
-	font-size: 45px;
+	font-size: 40px;
 }
 
 .navLogo {
@@ -95,14 +95,34 @@ a {
 	margin-top: 10px;
 }
 
+table, td {
+	border-collapse: collapse;
+	padding: 0;
+}
+
+.categoryResults {
+	margin-top: 78px;
+	float: left;
+
+}
+
+.resultsHolder {
+	vertical-align: top;
+}
+
 .results {
 	list-style-type: none;
-	margin-top: 78px;
+	margin-top: 100px;
 	padding-left: 0px;
+	margin-left: 0px;
 	height: 100px;
 	width:100%;
 	max-width: 1060px;
+	min-width: 30vw;
 	display: block;
+	transform: translateX(-50%);
+	left: 50%;
+	position: relative;
 }
 
 .resultButton {
@@ -120,6 +140,10 @@ a {
 /*	display: inline;*/
 }
 
+.table {
+	width: 100%;
+}
+
 #hanger {
 	height: 50px;
 	margin: 25px 20px 25px 40px;
@@ -134,11 +158,23 @@ a {
 }
 
 .resultButtonText {
-	font-size: 40px;
+	font-size: 35px;
+	letter-spacing: 1px;
 	color: #006837;
 	position: relative;
 /*  top: 50%;*/
-  transform: translateY(60%);
+  transform: translateY(70%);
+  text-align: center;
+}
+
+.outcomes {
+	padding: 100px;
+}
+
+.outcome {
+	margin: 0;
+	width: 30vw;
+	height: 350px;
 }
 
 .orange {
@@ -161,6 +197,34 @@ a {
 	background-color: #BE91EA;
 }
 
+.resultName {
+	text-transform: uppercase;
+	font-size: 35px;
+	color: #006837;
+}
+
+.resultDetails {
+	font-size: 35px;
+	color: #006837;
+}
+
+.locality {
+	display: block;
+}
+
+.region, .postal-code, .country-name {
+	display: none;
+}
+
+.starSize {
+	display: inline;
+	height: 35px;
+}
+
+.hideStar {
+	display: none;
+}
+
 @media only screen and (min-device-width : 375px) 
 and (max-device-width : 667px) {
 	.resultButton {
@@ -173,6 +237,10 @@ and (max-device-width : 667px) {
 		font-size: 27px;
   	transform: translateY(110%);
   	margin-left: 80px;
+	}
+
+	.hideMenu .results {
+		display:none;
 	}
 }
 

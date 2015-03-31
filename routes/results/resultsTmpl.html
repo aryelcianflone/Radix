@@ -1,129 +1,188 @@
-  <div> 
-    <a href="/#/"> Enter New Address </a>
-  </div>
+
   <center>
-    <div ng-show="showme" ng-repeat="place in placesData">
-      {{place.name}}
-      <br>
-      <div>
-        {{place.details.formatted_address}}
-        {{place.details.formatted_phone_number}}
-        {{place.details.rating}}
-      </div>
-      <div>
-        {{place.details.types}}
-      </div>
-      <div>{{place.details.url}}</div>
-        <br>
-    </div>
-
-      <ul class="results"> 
+    <table ng-class="{'hideMenu' : showingCategory}" class="table">
+      <tr>
+        <td class="resultsHolder">
+          <ul class="results"> 
           
-          <li class="resultButton orange" ng-click="getPlaces('coffee'); showme=true">
-            <img class="resultButtonIcon" src="icons/coffee.svg"/>
-            <div class="resultButtonText bold">
-              COFFEE 
-            </div>  
-          </li>
+            <li class="resultButton orange" ng-click="getPlaces('coffee'); showme=true">
+              <img class="resultButtonIcon" src="icons/coffee.svg"/>
+              <div class="resultButtonText bold">
+                COFFEE 
+              </div>  
+            </li>
 
-          <li class="resultButton green" ng-click="getPlaces('grocery'); showme=true">
-            <img class="resultButtonIcon" src="icons/grocery.svg"/>
-            <div class="resultButtonText bold">
-              GROCERY 
-            </div>  
-          </li>
-  
-          <li class="resultButton pink" ng-click="getPlaces('pizza'); showme=true">
-            <img class="resultButtonIcon" id="pizza" src="icons/pizza.svg"/>
-            <div class="resultButtonText bold">
-              PIZZA
-            </div>  
-          </li>
+            <li class="resultButton green" ng-click="getPlaces('grocery'); showme=true">
+              <img class="resultButtonIcon" src="icons/grocery.svg"/>
+              <div class="resultButtonText bold">
+                GROCERY 
+              </div>  
+            </li>
+    
+            <li class="resultButton pink" ng-click="getPlaces('pizza'); showme=true">
+              <img class="resultButtonIcon" id="pizza" src="icons/pizza.svg"/>
+              <div class="resultButtonText bold">
+                PIZZA
+              </div>  
+            </li>
 
-          <li class="resultButton blue" ng-click="getPlaces('movietheater'); showme=true">
-            <img class="resultButtonIcon" id="pizza" src="icons/movietheater.svg"/>
-            <div class="resultButtonText bold">
-              MOVIE THEATER
-            </div>  
-          </li>
+            <li class="resultButton blue" ng-click="getPlaces('movietheater'); showme=true">
+              <img class="resultButtonIcon" id="pizza" src="icons/movietheater.svg"/>
+              <div class="resultButtonText bold">
+                MOVIE THEATER
+              </div>  
+            </li>
 
-          <li class="resultButton purple" ng-click="getPlaces('atm'); showme=true">
-            <img class="resultButtonIcon" src="icons/atm.svg"/>
-            <div class="resultButtonText bold">
-              ATM
-            </div>  
-          </li>
+            <li class="resultButton purple" ng-click="getPlaces('atm'); showme=true">
+              <img class="resultButtonIcon" src="icons/atm.svg"/>
+              <div class="resultButtonText bold">
+                ATM
+              </div>  
+            </li>
 
-          <li class="resultButton orange" ng-click="getPlaces('gas'); showme=true">
-            <img class="resultButtonIcon" id="gas" src="icons/gas.svg"/>
-            <div class="resultButtonText bold">
-              GAS
-            </div>  
-          </li>
+            <li class="resultButton orange" ng-click="getPlaces('gas'); showme=true">
+              <img class="resultButtonIcon" id="gas" src="icons/gas.svg"/>
+              <div class="resultButtonText bold">
+                GAS
+              </div>  
+            </li>
 
-          <li class="resultButton green" ng-click="getPlaces('postoffice'); showme=true">
-            <img class="resultButtonIcon" id="hanger" src="icons/postoffice.svg"/>
-            <div class="resultButtonText bold">
-              POST OFFICE
-            </div>  
-          </li>
+            <li class="resultButton green" ng-click="getPlaces('postoffice'); showme=true">
+              <img class="resultButtonIcon" id="hanger" src="icons/postoffice.svg"/>
+              <div class="resultButtonText bold">
+                POST OFFICE
+              </div>  
+            </li>
 
-          <li class="resultButton pink" ng-click="getPlaces('drycleaning'); showme=true">
-            <img class="resultButtonIcon" id="hanger" src="icons/drycleaning.svg"/>
-            <div class="resultButtonText bold">
-              DRY CLEANING
-            </div>  
-          </li>
+            <li class="resultButton pink" ng-click="getPlaces('drycleaning'); showme=true">
+              <img class="resultButtonIcon" id="hanger" src="icons/drycleaning.svg"/>
+              <div class="resultButtonText bold">
+                DRY CLEANING
+              </div>  
+            </li>
 
-          <li class="resultButton blue" ng-click="getPlaces('pharmacy'); showme=true">
-            <img class="resultButtonIcon" src="icons/pharmacy.svg"/>
-            <div class="resultButtonText bold">
-              PHARMACY
-            </div>  
-          </li>
+            <li class="resultButton blue" ng-click="getPlaces('pharmacy'); showme=true">
+              <img class="resultButtonIcon" src="icons/pharmacy.svg"/>
+              <div class="resultButtonText bold">
+                PHARMACY
+              </div>  
+            </li>
 
-          <li class="resultButton purple" ng-click="getPlaces('carwash'); showme=true">
-            <img class="resultButtonIcon" id="gas" src="icons/carwash.svg"/>
-            <div class="resultButtonText bold">
-              CAR WASH
-            </div> 
-          </li>
+            <li class="resultButton purple" ng-click="getPlaces('carwash'); showme=true">
+              <img class="resultButtonIcon" id="gas" src="icons/carwash.svg"/>
+              <div class="resultButtonText bold">
+                CAR WASH
+              </div> 
+            </li>
 
-          <li class="resultButton orange" ng-click="getPlaces('carrepair'); showme=true">
-            <img class="resultButtonIcon" src="icons/carrepair.svg"/>
-            <div class="resultButtonText bold">
-              CAR REPAIR
-            </div>  
-          </li>
+            <li class="resultButton orange" ng-click="getPlaces('carrepair'); showme=true">
+              <img class="resultButtonIcon" src="icons/carrepair.svg"/>
+              <div class="resultButtonText bold">
+                CAR REPAIR
+              </div>  
+            </li>
 
-          <li class="resultButton green" ng-click="getPlaces('dentist'); showme=true">
-            <img class="resultButtonIcon" src="icons/pizza.svg"/>
-            <div class="resultButtonText bold">
-              DENTIST
-            </div>  
-          </li>
+            <li class="resultButton green" ng-click="getPlaces('dentist'); showme=true">
+              <img class="resultButtonIcon" src="icons/pizza.svg"/>
+              <div class="resultButtonText bold">
+                DENTIST
+              </div>  
+            </li>
 
-          <li class="resultButton pink" ng-click="getPlaces('doctor'); showme=true">
-            <img class="resultButtonIcon" src="icons/doctor.svg"/>
-            <div class="resultButtonText bold">
-              DOCTOR
-            </div>  
-          </li>
+            <li class="resultButton pink" ng-click="getPlaces('doctor'); showme=true">
+              <img class="resultButtonIcon" src="icons/doctor.svg"/>
+              <div class="resultButtonText bold">
+                DOCTOR
+              </div>  
+            </li>
 
-          <li class="resultButton blue" ng-click="getPlaces('hospital'); showme=true">
-            <img class="resultButtonIcon" src="icons/hospital.svg"/>
-            <div class="resultButtonText bold">
-              HOSPITAL
-            </div>  
-          </li>
+            <li class="resultButton blue" ng-click="getPlaces('hospital'); showme=true">
+              <img class="resultButtonIcon" src="icons/hospital.svg"/>
+              <div class="resultButtonText bold">
+                HOSPITAL
+              </div>  
+            </li>
 
-          <li class="resultButton purple" ng-click="getPlaces('police'); showme=true">
-            <img class="resultButtonIcon" src="icons/police.svg"/>
-            <div class="resultButtonText bold">
-              POLICE
-            </div>  
-          </li>
+            <li class="resultButton purple" ng-click="getPlaces('police'); showme=true">
+              <img class="resultButtonIcon" src="icons/police.svg"/>
+              <div class="resultButtonText bold">
+                POLICE
+              </div>  
+            </li>
+          </ul>
+        </td>
 
-      </ul>
+        <td ng-class="[color]" ng-show="showme" class="categoryResults outcomes">
+          <div class="categoryResults outcome" ng-repeat="place in placesData">
+            <span class="resultName bold">{{place.name}}</span>
+            <br>
+            <span>
+              <svg ng-class="{'hideStar' : place.details.star1}" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="none" stroke="#006837" stroke-width="2" stroke-miterlimit="10" points="-528.9,432.4 -538.4,437.4 -536.6,426.8 
+              -544.3,419.3 -533.7,417.8 -528.9,408.2 -524.2,417.8 -513.6,419.3 -521.3,426.8 -519.5,437.4 "/>
+              </svg>
+              <svg ng-show="place.details.star1" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="#006837" points="-528.9,433.8 -539.7,439.5 -537.7,427.4 -546.4,418.9 -534.3,417.1 -528.9,406.1 -523.5,417.1 
+              -511.3,418.9 -520.1,427.4 -518,439.5 "/>
+              </svg>
+              <svg ng-class="{'hideStar' : place.details.star2}" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="none" stroke="#006837" stroke-width="2" stroke-miterlimit="10" points="-528.9,432.4 -538.4,437.4 -536.6,426.8 
+              -544.3,419.3 -533.7,417.8 -528.9,408.2 -524.2,417.8 -513.6,419.3 -521.3,426.8 -519.5,437.4 "/>
+              </svg>
+              <svg ng-show="place.details.star2" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="#006837" points="-528.9,433.8 -539.7,439.5 -537.7,427.4 -546.4,418.9 -534.3,417.1 -528.9,406.1 -523.5,417.1 
+              -511.3,418.9 -520.1,427.4 -518,439.5 "/>
+              </svg>
+              <svg ng-class="{'hideStar' : place.details.star3}" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="none" stroke="#006837" stroke-width="2" stroke-miterlimit="10" points="-528.9,432.4 -538.4,437.4 -536.6,426.8 
+              -544.3,419.3 -533.7,417.8 -528.9,408.2 -524.2,417.8 -513.6,419.3 -521.3,426.8 -519.5,437.4 "/>
+              </svg>
+              <svg ng-show="place.details.star3" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="#006837" points="-528.9,433.8 -539.7,439.5 -537.7,427.4 -546.4,418.9 -534.3,417.1 -528.9,406.1 -523.5,417.1 
+              -511.3,418.9 -520.1,427.4 -518,439.5 "/>
+              </svg>
+              <svg ng-class="{'hideStar' : place.details.star4}" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="none" stroke="#006837" stroke-width="2" stroke-miterlimit="10" points="-528.9,432.4 -538.4,437.4 -536.6,426.8 
+              -544.3,419.3 -533.7,417.8 -528.9,408.2 -524.2,417.8 -513.6,419.3 -521.3,426.8 -519.5,437.4 "/>
+              </svg>
+              <svg ng-show="place.details.star4" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="#006837" points="-528.9,433.8 -539.7,439.5 -537.7,427.4 -546.4,418.9 -534.3,417.1 -528.9,406.1 -523.5,417.1 
+              -511.3,418.9 -520.1,427.4 -518,439.5 "/>
+              </svg>
+              <svg ng-class="{'hideStar' : place.details.star5}" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="none" stroke="#006837" stroke-width="2" stroke-miterlimit="10" points="-528.9,432.4 -538.4,437.4 -536.6,426.8 
+              -544.3,419.3 -533.7,417.8 -528.9,408.2 -524.2,417.8 -513.6,419.3 -521.3,426.8 -519.5,437.4 "/>
+              </svg>
+              <svg ng-show="place.details.star5" class="starSize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              viewBox="-546.8 405 35.9 35.6" enable-background="new -546.8 405 35.9 35.6" xml:space="preserve">
+              <polygon fill="#006837" points="-528.9,433.8 -539.7,439.5 -537.7,427.4 -546.4,418.9 -534.3,417.1 -528.9,406.1 -523.5,417.1 
+              -511.3,418.9 -520.1,427.4 -518,439.5 "/>
+              </svg>
+            </span>
+            <span class="resultDetails">
+              {{place.details.rating}}
+              <br>
+                <span class="bold">2.1 MILES</span>
+              <br>
+              {{place.details.street_number}} {{place.details.route}}
+              <br>
+              {{place.details.locality}}
+              <br>
+              {{place.details.formatted_phone_number}}
+            </span>
+          </div>
+        </td>
+
+      </tr>
+    </table>
     
   </center>
